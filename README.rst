@@ -1,87 +1,59 @@
-================================
-Django Two-Factor Authentication
-================================
 
-.. image:: https://jazzband.co/static/img/badge.svg
-        :target: https://jazzband.co/
-        :alt: Jazzband
+# WebX_Security 🔐
 
-.. image:: https://github.com/jazzband/django-two-factor-auth/workflows/build/badge.svg?branch=master
-    :alt: Build Status
-    :target: https://github.com/jazzband/django-two-factor-auth/actions
+**WebX_Security** is a Django-based project focused on strengthening user authentication through Two-Factor Authentication (2FA). This app demonstrates secure login practices, token-based verification, and best practices in securing Django applications.
 
-.. image:: https://codecov.io/gh/jazzband/django-two-factor-auth/branch/master/graph/badge.svg
-    :alt: Test Coverage
-    :target: https://codecov.io/gh/jazzband/django-two-factor-auth
+## 🚀 Key Features
 
-.. image:: https://badge.fury.io/py/django-two-factor-auth.svg
-    :alt: PyPI
-    :target: https://pypi.python.org/pypi/django-two-factor-auth
+- 🔐 Two-Factor Authentication (TOTP/Twilio-based)
+- 🧾 Secure token generation and backup tokens
+- 🧱 Modular views and utilities for clean 2FA logic
+- 🖥️ Django template integration for 2FA flows
+- 🧰 Custom template tags for frontend control
 
-Complete Two-Factor Authentication for Django. Built on top of the one-time
-password framework django-otp_ and Django's built-in authentication framework
-``django.contrib.auth`` for providing the easiest integration into most Django
-projects. Inspired by the user experience of Google's Two-Step Authentication,
-allowing users to authenticate through call, text messages (SMS), by using a
-token generator app like Google Authenticator or a YubiKey_ hardware token
-generator (optional).
+## 🛠️ Tech Stack
 
-If you run into problems, please file an issue on GitHub, or contribute to the
-project by forking the repository and sending some pull requests. The package
-is translated into English, Dutch and other languages. Please contribute your
-own language using Transifex_.
+- **Python 3**
+- **Django**
+- **Django-Two-Factor-Auth**
+- **SQLite** (can be swapped with PostgreSQL)
+- **Twilio (optional for SMS-based 2FA)**
 
-Test drive this app through the `example app`_. It demos most features except
-the Twilio integration. The example also includes django-user-sessions_ for
-providing Django sessions with a foreign key to the user. Although the package
-is optional, it improves account security control over
-``django.contrib.sessions``.
+## 🧪 Setup Instructions
 
-Compatible with supported Django and Python versions. At the moment of writing that
-includes 3.2, 4.0, 4.1, and 4.2 on Python 3.8, 3.9, 3.10 and 3.11.
-Documentation is available at `readthedocs.io`_.
+```bash
+git clone https://github.com/AnishPasupuleti/WebX_Security.git
+cd WebX_Security
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
 
+Then visit: `http://localhost:8000/`
 
-Installation
-============
-Refer to the `installation instructions`_ in the documentation.
+## 📁 Project Highlights
 
+```
+two_factor/
+├── views/            # Core 2FA logic
+├── utils.py          # Helper functions
+├── templates/        # Token and login templates
+├── templatetags/     # Custom tags for frontend logic
+├── urls.py           # Routing for 2FA
+```
 
-Getting help
-============
+## 🔍 What You’ll Learn
 
-For general questions regarding this package, please hop over to `Stack Overflow`_.
-If you think there is an issue with this package; check if the
-issue is already listed (either open or closed), and file an issue if
-it's not.
+- Implementing secure 2FA in Django
+- Token generation and validation workflows
+- Creating secure, modular, and reusable views
 
+## 📌 Future Scope
 
-Contribute
-==========
-Read the `contribution guidelines`_.
+- Integrate with social logins (Google/GitHub)
+- Rate limiting and brute-force detection
+- Session-based device trust and history
 
+## 📜 License
 
-See Also
-========
-Have a look at django-user-sessions_ for Django sessions with a foreign key to
-the user. This package is also included in the `example app`_.
-
-
-License
-=======
-The project is licensed under the MIT license.
-
-.. _`example app`:
-   https://github.com/jazzband/django-two-factor-auth/tree/master/example
-.. _django-otp: https://pypi.org/project/django-otp/
-.. _Transifex: https://explore.transifex.com/Bouke/django-two-factor-auth/
-.. _Twilio: https://www.twilio.com/
-.. _contribution guidelines:
-   https://github.com/jazzband/django-two-factor-auth/blob/master/CONTRIBUTING.rst
-.. _django-user-sessions: https://pypi.org/project/django-user-sessions/
-.. _readthedocs.io: https://django-two-factor-auth.readthedocs.io/en/stable/index.html
-.. _`installation instructions`:
-   https://django-two-factor-auth.readthedocs.io/en/stable/installation.html
-.. _`Stack Overflow`:
-   https://stackoverflow.com/questions/tagged/django-two-factor-auth
-.. _Yubikey: https://www.yubico.com/products/yubikey-hardware/
+MIT License. Feel free to modify and use with credit.
