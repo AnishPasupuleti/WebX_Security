@@ -6,7 +6,7 @@
 ## 🚀 Key Features  
  
 - 🔐 Two-Factor Authentication (TOTP/Twilio-based) 
-- 🧾 Secure token generation and backup tokens 
+- 🧾 Secure token generation and backup tokens  
 - 🧱 Modular views and utilities for clean 2FA logic 
 - 🖥️ Django template integration for 2FA flows
 - 🧰 Custom template tags for frontend control
