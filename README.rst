@@ -1,5 +1,5 @@
 
-# WebX_Security 🔐    
+#  WebX_Security 🔐    
   
 **WebX_Security** is a Django-based project focused on strengthening user authentication through Two-Factor Authentication (2FA). This app demonstrates secure login practices, token-based verification, and best practices in securing Django applications.
  
